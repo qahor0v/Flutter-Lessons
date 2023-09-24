@@ -10,5 +10,7 @@ Kerakli packagelar:
 
 *Build runner command*: ```flutter pub run build_runner build```
 
+[Hive Docs](https://pub.dev/packages/build_runner)
+
 
 
