@@ -8,9 +8,13 @@ Kerakli packagelar:
 - [hive_generator](https://pub.dev/packages/hive_generator)
 - [build_runner](https://pub.dev/packages/build_runner)
 
-*Build runner command*: ```flutter pub run build_runner build```
+*Build runner komandasi*: ```flutter pub run build_runner build```
 
-[Hive Docs](https://pub.dev/packages/build_runner)
+[Hive dokumentatsiyalari rasmiy sayti](https://pub.dev/packages/build_runner)
+
+**Mavzuga doir proyektlar**
+- [Xarajatlar ilovasi](https://github.com/qahor0v/flutter_with_me/tree/master/my_expenses)
+- [Eslatmalar ilovasi](https://github.com/qahor0v/flutter_with_me/tree/master/hive_db)
 
 
 
