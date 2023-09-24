@@ -1,8 +1,14 @@
 # Flutter lessons
-## Shared Preferences
-## Hive Database
-## Url Launcher
 
-### Build Generator command here
-Flutter build runner command: ```flutter pub run build_runner build```
- 
+## 1. Hive database
+Kerakli packagelar:
+
+- [hive](https://pub.dev/packages/hive)
+- [hive_flutter](https://pub.dev/packages/hive_flutter)
+- [hive_generator](https://pub.dev/packages/hive_generator)
+- [build_runner](https://pub.dev/packages/build_runner)
+
+*Build runner command*: ```flutter pub run build_runner build```
+
+
+
