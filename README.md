@@ -21,6 +21,7 @@ Kerakli packagelar:
 
 ## 3. Url launcher
 [proyekt](https://github.com/qahor0v/Flutter-Lessons/tree/master/url_launcher_lesson)
+
 Internet permission: ``` <uses-permission android:name="android.permission.INTERNET" /> ```
 
 
