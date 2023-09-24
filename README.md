@@ -19,7 +19,7 @@ Kerakli packagelar:
 ## 2. Shared Preferences database
 [shared_prefernces package](https://pub.dev/packages/shared_preferences)
 
-[project](https://github.com/qahor0v/Flutter-Lessons/tree/master/shared_preference_lesson)
+[proyekt](https://github.com/qahor0v/Flutter-Lessons/tree/master/shared_preference_lesson)
 
 
 ## 3. Url launcher
