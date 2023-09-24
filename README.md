@@ -16,5 +16,14 @@ Kerakli packagelar:
 - [Xarajatlar ilovasi](https://github.com/qahor0v/flutter_with_me/tree/master/my_expenses)
 - [Eslatmalar ilovasi](https://github.com/qahor0v/flutter_with_me/tree/master/hive_db)
 
+## 2. Shared Preferences database
+
+
+## 3. Url launcher
+[proyekt](https://github.com/qahor0v/Flutter-Lessons/tree/master/url_launcher_lesson)
+Internet permission: ``` <uses-permission android:name="android.permission.INTERNET" /> ```
+
+
+
 
 
