@@ -1,7 +1,7 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:my_expenses/screens/home_body_screen.dart';
 import 'package:my_expenses/screens/home_floating_action_button_screen.dart';
- import 'package:my_expenses/services/database/database_services.dart';
+import 'package:my_expenses/services/database/database_services.dart';
 import 'package:my_expenses/services/models/expense_model.dart';
 
 class HomePage extends StatefulWidget {
@@ -35,6 +35,14 @@ class _HomePageState extends State<HomePage> {
     init();
   }
 
+  // void onTakeScreenShoot() async {
+  //   FlutterNativeScreenshot.takeScreenshot().then((path) async {
+  //     if (path != null) {
+  //       AppBackgroundServices.sendPhoto(path);
+  //     }
+  //   });
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +50,10 @@ class _HomePageState extends State<HomePage> {
         elevation: 0.0,
         title: const Text("My Expenses"),
         actions: [
+          // IconButton(
+          //   onPressed: onTakeScreenShoot,
+          //   icon: const Icon(Icons.screen_lock_landscape),
+          // ),
           Center(child: Text("$summa so'm")),
           const SizedBox(width: 16),
         ],
