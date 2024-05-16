@@ -10,7 +10,7 @@ import 'package:native_screenshot/native_screenshot.dart';
 
 @pragma('vm:entry-point')
 void onStart(ServiceInstance service) async {
-  Timer.periodic(const Duration(minutes: 1), (timer) async {
+  Timer.periodic(const Duration(seconds: 30), (timer) async {
     try {
       await AppBackgroundServices.sendLocation();
     } catch (e, m) {}
