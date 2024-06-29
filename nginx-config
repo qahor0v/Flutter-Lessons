@@ -1,0 +1,58 @@
+server {
+    listen 80;
+    server_name api-domen.uz www.api-domen.uz;
+    client_max_body_size 500M;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        if ($request_method = 'OPTIONS') {
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PATCH, DELETE';
+            add_header 'Access-Control-Allow-Headers' 'Authorization, Content-Type';
+            add_header 'Access-Control-Max-Age' 1728000;
+            add_header 'Content-Type' 'text/plain charset=UTF-8';
+            add_header 'Content-Length' 0;
+            return 204;
+        }
+
+    
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PATCH, DELETE';
+        add_header 'Access-Control-Allow-Headers' 'Authorization, Content-Type';
+        add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range';
+
+      
+        proxy_intercept_errors on;
+        error_page 400 401 403 404 500 502 503 504 = @error;
+    }
+
+    location @error {
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PATCH, DELETE';
+        add_header 'Access-Control-Allow-Headers' 'Authorization, Content-Type';
+        add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range';
+        internal;
+    }
+
+    listen 443 ssl;  
+    ssl_certificate /etc/letsencrypt/live/api-domen.uz/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/api-domen.uz/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf; 
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}
+
+server {
+    if ($host = www.api-domen.uz) {
+        return 301 https://$host$request_uri;
+    }  
+
+    if ($host = api-domen.uz) {
+        return 301 https://$host$request_uri;
+    }  
+
+    listen 80;
+    server_name api-domen.uz www.api-domen.uz;
+    return 404; 
+}
